@@ -1,0 +1,82 @@
+{% include 'employeeheader.html' %}
+<link rel="stylesheet" href="/static/css/employee.css">
+<link rel="stylesheet" href="/static/css/css/bootstrap.min.css">
+
+
+
+{% if emp['updateEmployee'] %}
+<form action="" method="post">
+    
+    <div class="container">
+        <hr>
+            <h1>Update Employee</h1>
+        <hr>
+        <div>
+            <label for="">Employee Name</label>
+        <input type="text" value="{{emp['updateEmployee'][0]['e_name']}}" name="e_name">
+        </div>
+
+        <div>
+            <label for="">Employee Contact</label>
+        <input type="text" value="{{emp['updateEmployee'][0]['e_phone']}}" name="e_contact">
+        </div>
+
+        <div>
+            <label for="">Employee Department</label>
+        <input type="text" value="{{emp['updateEmployee'][0]['e_department']}}" name="e_dept">
+        </div>
+
+        <div>
+            <label for="">Employee Address</label>
+        <input type="textarea" value="{{emp['updateEmployee'][0]['e_address']}}" name="e_address">
+        </div>
+        
+        <div>
+            <label for="">Employee Work</label>
+        <input type="text" value="{{emp['updateEmployee'][0]['e_work']}}" name="e_work">
+        </div>
+        <div>
+        <input type="submit" name="submit" value="submit" id="">
+    </div>
+    </div>
+{% else %}
+    <div class="container">
+        <div>
+            <h3>View Employee</h3>
+      
+            <table class="table table-striped">
+              <tr>
+                <th>Employee Name</th>
+                <th>Employee Contact</th>
+                <th>Employee Department</th>
+                <th>Employee Address</th>
+                <th>Employee Work</th>
+                <th>Update</th>
+                <th>Delete</th>
+              </tr>
+      
+              {% for row in emp['res'] %}
+              <tr>
+                <td>{{ row['e_name'] }}</td>
+                <td>{{ row['e_phone']}}</td>
+                <td>{{ row['e_department']}}</td>
+                <td>{{ row['e_address'] }}</td>
+                <td>{{ row['e_work'] }}</td>
+                <td>
+                  <a href="?action=update&e_id={{ row['e_id'] }}">Update</a>
+                </td>
+                <td>
+                  <a
+                    onclick="return confirm('are you sure!')"
+                    href="?action=delete&e_id={{ row['e_id'] }}"
+                    >Delete</a
+                  >
+                </td>
+              </tr>
+              {% endfor %}
+            </table>
+    </div>
+    {% endif %}
+</form>
+
+{% include 'footer.html' %}

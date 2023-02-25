@@ -1,0 +1,59 @@
+
+<link rel="stylesheet" href="/static/css/css/bootstrap.min.css">
+<link rel="stylesheet" href="/static/css/register.css">
+{% include 'publicheader.html' %}
+
+    <form action="" method="post">
+        
+      <div class="container">
+        <h3 class="heading">Register</h3>
+        <hr>
+        <div>
+          <label for="">First Name</label>
+          <input type="text" name="fname" id="" />
+        </div>
+        <div>
+          <label for="">Last Name</label>
+          <input type="text" name="lname" id="" />
+        </div>
+        <div>
+          <label for="">Date of Birth</label>
+          <input type="date" name="dob" id="" />
+        </div>
+        <div>
+          <label for="">Contact</label>
+          <input type="text" name="contact" />
+        </div>
+        <div>
+          <label for="">Address</label>
+          <input type="textarea" name="address" id="" />
+        </div>
+        <div>
+          <label for="">Gender</label>
+          <input type="radio" name="gen" value="male" id="" />Male</input>
+          <input type="radio" name="gen" value="female" id="" />Female</input>
+          <input type="radio" name="gen" value="other" id="" />Other</input>
+        </div>
+        <div>
+          <label for="">Email</label>
+          <input type="email" name="email" id="email" />
+        </div>
+        <div>
+          <label for="">Password</label>
+          <input type="password" name="password"/>
+        </div>
+        <div>
+          <label for="">Qualification</label>
+          <input type="text" name="quali" />
+        </div>
+        <div>
+        <label for="">Hobbies</label>
+        <input type="text" name="hobb" />
+      </div>
+      <hr>
+      <div>
+        <input type="submit" name="submit" id="" value="Submit">
+      </div>
+      </div>
+    </form>
+{% include 'footer.html' %}

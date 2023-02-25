@@ -1,0 +1,30 @@
+/* .container{
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 90vh;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.heading{
+    color:  blue;
+} */
+* {box-sizing: border-box}
+.container {
+    padding: 16px;
+}
+
+div {
+    margin-bottom: 10px;
+  }
+  label {
+    display: inline-block;
+    width: 110px;
+    color: #777777;
+  }
+  input {
+    padding: 5px 10px;
+  }

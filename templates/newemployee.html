@@ -1,0 +1,40 @@
+{% include 'employeeheader.html' %}
+<link rel="stylesheet" href="/static/css/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/static/css/newemployee.css" />
+<form action="" method="post">
+  <div class="container">
+    <hr />
+    <h1>Update Employee</h1>
+    <hr />
+    <div>
+      <label for="">Employee Name</label>
+      <input type="text" name="e_name" />
+    </div>
+
+    <div>
+      <label for="">Employee Contact</label>
+      <input type="text" name="e_contact" />
+    </div>
+
+    <div>
+      <label for="">Employee Department</label>
+      <input type="text" name="e_dept" />
+    </div>
+
+    <div>
+      <label for="">Employee Address</label>
+      <input type="textarea" name="e_address" />
+    </div>
+
+    <div>
+      <label for="">Employee Work</label>
+      <input type="text" name="e_work" />
+    </div>
+    <hr>
+    <div>
+      <input type="submit" name="submit" value="submit" id="" />
+    </div>
+
+    {% include 'footer.html' %}
+  </div>
+</form>
